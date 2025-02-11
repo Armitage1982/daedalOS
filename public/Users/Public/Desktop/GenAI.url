@@ -1,0 +1,6 @@
+[InternetShortcut]
+BaseURL=FileExplorer
+Comment=Images generated thanks to ComfyUI and Stable Diffusion models
+IconFile=/System/Icons/pictures.webp
+Type=System
+URL=/GenAI
