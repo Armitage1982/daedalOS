@@ -48,7 +48,7 @@ const createRssFeedItems = (url) => {
     return [
       "<item>",
       `<title>${basename(link, BLOG_EXTENSION)}</title>`,
-      `<link>${encodeURI(`${author.url}/?url=${relative(PUBLIC_PATH, link).replace(/\\/g, "/")}`)}</link>`,
+      `<link>${encodeURI(`https://d.arm42.com/?url=${relative(PUBLIC_PATH, link).replace(/\\/g, "/")}`)}</link>`,
       `<description>${itemDescription}${fileDataString.trim().length > 100 ? "..." : ""}</description>`,
       `<guid isPermaLink="false">${createHash("md5").update(fileData).digest("hex")}</guid>`,
       `<pubDate>${stats.mtime.toUTCString()}</pubDate>`,
@@ -57,14 +57,14 @@ const createRssFeedItems = (url) => {
   });
 };
 
-const name = "daedalOS";
+const name = "d.arm42.com";
 const rss = [
   '<?xml version="1.0" encoding="utf-8"?>',
   '<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">',
   "<channel>",
-  `<atom:link href="${author.url}/rss.xml" rel="self" type="application/rss+xml" />`,
+  `<atom:link href="https://d.arm42.com/rss.xml" rel="self" type="application/rss+xml" />`,
   `<title>${name}</title>`,
-  `<link>${author.url}</link>`,
+  `<link>https://d.arm42.com</link>`,
   `<description>${description}</description>`,
   `<lastBuildDate>${lastBuildDate || new Date().toUTCString()}</lastBuildDate>`,
   ...createRssFeedItems("Users/Public/Documents/Blog Posts"),

@@ -8,7 +8,7 @@ const buildAppSitemap = (path) => {
   readdirSync(path).forEach((entry) => {
     if (statSync(join(path, entry)).isDirectory()) {
       xmlUrls.push(
-        `<url><loc>${author.url}/?app=${entry.replace(/-/g, "")}</loc></url>`
+        `<url><loc>https://d.arm42.com/?app=${entry.replace(/-/g, "")}</loc></url>`
       );
     }
   });
@@ -31,9 +31,9 @@ const buildFileSitemap = (path, excludePaths, callback) => {
 
       xmlUrls.push(
         callback(
-          `${author.url}/?url=${encodedUrlEntryPath}`,
+          `https://d.arm42.com/?url=${encodedUrlEntryPath}`,
           stats.mtime.toISOString().substring(0, 10),
-          `${author.url}/${encodedUrlEntryPath}`
+          `https://d.arm42.com/${encodedUrlEntryPath}`
         )
       );
     }
@@ -67,7 +67,7 @@ writeFileSync(
 
 writeFileSync(
   "public/robots.txt",
-  `User-agent: *\nAllow: /\n\nSitemap: ${author.url}/sitemap.xml\n`,
+  `User-agent: *\nAllow: /\n\nSitemap: https://d.arm42.com/sitemap.xml\n`,
   {
     flag: "w",
   }

@@ -142,7 +142,7 @@ const Metadata: FC = () => {
       <meta content={alias} property="og:title" />
       <meta content="website" property="og:type" />
       <meta content={author.url} property="og:url" />
-      <meta content={`${author.url}/screenshot.png`} property="og:image" />
+      <meta content={`${author.url}/GenAI/Generation_04/ColorCompel/CC00.jpg`} property="og:image" />
       <meta content={description} property="og:description" />
       <link
         href={`${author.url}/rss.xml`}

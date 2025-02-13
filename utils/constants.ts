@@ -355,12 +355,12 @@ export const DEFAULT_SCROLLBAR_WIDTH = 17;
 export const TASKBAR_HEIGHT = 30;
 
 export const PACKAGE_DATA = {
-  alias: "daedalOS",
+  alias: "Desktop ARm42.com",
   author: {
-    email: "dustinbrett@gmail.com",
-    name: "Dustin Brett",
-    npub: "npub10uc7hg6wdxhhd7ee8x9c5lr9d0ux7272rv2m0mc03ds54q7quxjss02r3p",
-    url: "https://dustinbrett.com",
+    email: "info@arm42.com",
+    name: "Michael Lievens",
+    npub: "f473ad13216ab3be812d2b24bfd14e6c970c2b94cee41a8ef60f2b8dfa35aa05",
+    url: "https://d.arm42.com",
   },
   description: "Desktop environment in the browser",
   license: "MIT",
